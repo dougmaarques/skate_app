@@ -98,7 +98,6 @@ body {
     background-color: #15191C;
     width: 75vw;
     height: 100vh;
-
     position: absolute;
     left: -100vw;
     transition: .25s;
@@ -135,6 +134,11 @@ body {
     border-left: 8px solid #FFFFFF;
 }
 
+.menu-lateral__link--videos-ativo {
+    color: #FFFFFF;
+    padding-left: 56px;
+    border-left: 8px solid #FFFFFF;
+}
 
 .menu-lateral__link::before {
     content: "\e900";
@@ -431,5 +435,215 @@ body {
     .secao-produtos {
         grid-area: secao-produtos;
     }
+
+    .secao-videos-detalhes{
+        grid-area: secao-videos-detalhes;
+    }
+}
+
+
+.cabecalho__menu {
+    display: none;
+}
+
+
+@media screen and (min-width: 1440px) {
+    .principal__videos-destaques {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 
+            "destaque-video destaque-video secao-videos-detalhes"
+        ;
+        column-gap: 32px;
+        padding: 16px 60px;
+        grid-column: 2;
+    }
+
+    .cartao__conteudo-detalhes {
+        padding: 16px;
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 8px;
+    }
+
+    .cartao__perfil-detalhes {
+        color: white;
+        font-size: 0.9rem;
+        grid-column: span 2;
+        margin-bottom: 6px;
+    }
+    
+    .cartao__info-detalhes {
+        display: flex;
+        align-items: center;
+        color: #95999C;
+    }
+
+    .secao-videos-detalhes {
+        display: grid;
+        grid-template-columns: auto ;
+        align-items: center;
+        row-gap: 24px;
+        width: 256px;
+        padding: 16px;
+        box-sizing: border-box;
+        align-self: flex-start;
+        background-color: #2C343A;
+    }
+
+    .cartao_videos-destaques {
+        width: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: #2C343A;
+    }
+
+    .cartao__titulo-destaques {
+            font-size: 1.0rem;
+            font-weight: 700;
+            grid-column: span 2;
+    }
+    
+    .cartao__info--tempo-destaques {
+        font-size: 0.8rem;
+        font-weight: 700;
+    }
+
+
+    .cartao__botao-destaques {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0480DC;
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        font-size: 0.7rem;
+        justify-self: flex-end;
+    }
+    
+    .cartao__botao--play::before {
+        content: "\e90b";
+        font-size: 20px;
+    }
+
+    .titulo-secao-detalhes {
+       margin: 10px;
+
+    }
+
+    .descricao {
+        display: flex;
+        align-items: center;
+        color: #95999C;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .cartao__imagem-detalhes {
+        margin: 10px;
+    }
+  
+}
+
+
+
+.principal__videos-destaques {
+    column-gap: 32px;
+    padding: 16px 60px;
+    grid-column: 2;
+}
+
+.cartao__conteudo-detalhes {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 8px;
+}
+
+.cartao__perfil-detalhes {
+    color: white;
+    font-size: 0.9rem;
+    grid-column: span 2;
+    margin-bottom: 6px;
+}
+
+.cartao__info-detalhes {
+    display: flex;
+    align-items: center;
+    color: #95999C;
+}
+
+.secao-videos-detalhes {
+    display: grid;
+    grid-template-columns: auto ;
+    align-items: center;
+    row-gap: 24px;
+    width: 256px;
+    padding: 16px;
+    box-sizing: border-box;
+    align-self: flex-start;
+    background-color: #2C343A;
+}
+
+.cartao_videos-destaques {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #2C343A;
+}
+
+.cartao__titulo-destaques {
+        font-size: 1.0rem;
+        font-weight: 700;
+        grid-column: span 2;
+}
+
+.cartao__info--tempo-destaques {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+
+.cartao__botao-destaques {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0480DC;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    justify-self: flex-end;
+}
+
+.cartao__botao--play::before {
+    content: "\e90b";
+    font-size: 20px;
+}
+
+.titulo-secao-detalhes {
+   margin: 10px;
+
+}
+
+.descricao {
+    display: flex;
+    align-items: center;
+    color: #95999C;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.cartao__imagem-detalhes {
+    margin: 10px;
+    width: 230px;
+}
+.video-detalhes-imagens {
+    margin-left: 30px;
+}
+
+.banner-detalhes {
+    display: none;
 }
 
